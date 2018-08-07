@@ -9,7 +9,7 @@ from wagtail.images.blocks import ImageChooserBlock
 
 class ArticlePage(Page):
     author = models.CharField(max_length=255)
-    date = models.DateField("Created Date", auto_now_add=True)
+    date = models.DateField("Created Date")
     body = StreamField([
         ('heading', blocks.CharBlock(classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
