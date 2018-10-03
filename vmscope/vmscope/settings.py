@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
     'contents',
+    'microscope.apps.MicroscopeConfig',
 ]
 
 MIDDLEWARE = [

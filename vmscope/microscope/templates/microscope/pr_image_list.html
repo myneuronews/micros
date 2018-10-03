@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image List</title>
+</head>
+<body>
+    <h1>Image List</h1>
+    <table>
+        <thead>
+            <th>Parasite Name</th>
+            <th>Stage</th>
+            <th>URL</th>
+            <th>Preview</th>
+        </thead>
+    {% for img in images %}
+        <tr>
+            <td>{{ img.parasite }}</td>
+            <td>{{ img.stage }}</td>
+            <td>{{ img.image.url }}</td>
+            <td><img src="{{img.image.url}}" height="100px"/></td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
